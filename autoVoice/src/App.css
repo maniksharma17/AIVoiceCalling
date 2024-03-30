@@ -1,25 +1,40 @@
 html{
-  color: black;
+  background-color: #31363F;
+  color: white;
 }
 nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   border-bottom: 1px solid black;
-  background-color: white;
+  background-color: black;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   padding-left: 10px;
   z-index: 20;
+  height: 120px;
 }
 .logo{
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-content: center;
   gap: 5px;
+  margin: 0;
 }
-.logo p{
-  font-size: 30px;
-  font-weight: 100;
+#logoHead{
+  font-size: 40px;
+  color: white;
+  margin: 0;
+  
+}
+#logoText{
+  font-size: 20px;
+  display: block;
+  color: white;
+  margin: 0;
 }
 
 .box{
@@ -28,16 +43,20 @@ nav{
   width: 30%;
   margin: auto;
   gap: 20px;
-  text-align: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  
 }
 
 input{
-  height: 30px;
-  border-radius: 20px;
-  border: 1px solid black;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
   padding: 5px;
   padding-left: 10px;
   font-size: 18px;
+  background-color: rgb(234, 235, 235);
+  outline: #31363F;
 }
 input::placeholder{
   color: rgb(171, 171, 171);
@@ -48,6 +67,8 @@ label{
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 2px;
   margin-left: 5px;
+  color:#c9f5f8;
+  text-align: center;
 }
 
 div{
@@ -59,26 +80,47 @@ textarea{
   height: 120px;
   border-radius: 10px;
   padding: 10px;
+  outline: #31363F;
+  background-color: rgb(234, 235, 235);
 }
 
 button{
-  background-color: rgb(121, 187, 245);
   border: none;
-  height: 60px;
+  height: 50px;
   border-radius: 35px;
+  border: 3px solid #76ABAE;
+  color: #76ABAE;
+  background-color: transparent;
+  width: 40%;
+  transition: all 0.2s ease-in-out;
+  fill: #76ABAE;
+  margin: auto;
+}
+button:hover{
+  opacity: 0.8;
+  background-color: #76ABAE;
+  color: black;
+  fill: black;
+  box-shadow: 0px 0px 20px rgba(27, 191, 213, 0.4);
+}
+button:active{
+  opacity: 0;
 }
 .btnContent{
   display: flex;
   flex-direction: row;
-  font-size: 20px;
   justify-content: center;
   align-items: center;
+}
+.btnContent p{
+  margin: 0;
+  font-size: 25px;
 }
 
 
 #title{
   font-size: 5vw;
-  margin-top: 15vh;
+  margin-top: 20vh;
   text-align: center;
   z-index: 10;
 }

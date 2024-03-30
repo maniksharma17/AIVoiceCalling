@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css'
+
 import { CallIcon } from './assets/components/Call_icon';
 import { LogoIcon } from './assets/components/Logo_icon';
 
@@ -14,7 +15,11 @@ function App() {
       <nav>
         <div className='logo'>
           <LogoIcon></LogoIcon>
-          <p>AutoVoice</p>
+          <div>
+            <p id='logoHead'>Direct Dial</p>
+            <p id='logoText'>Solutions</p>
+          </div>
+          
         </div> 
       </nav>
 
@@ -45,8 +50,8 @@ function App() {
 )}
 
 function Call({phone, msg}){
-  const auth_token = '487ff42e-7ba7-4615-a3d9-f32383adb5e8';
-  const phone_number_id = '6278b486-8fea-430a-88fe-4d244b6c31d3'
+  const auth_token = 'db2940f4-fb54-44d9-b4d1-4c6a367da27f';
+  const phone_number_id = '63810e4a-a558-4cdd-b233-9a50dc2ef288'
   const customer_number = "+91 " + phone;
 
   const headers = {
@@ -69,7 +74,7 @@ function Call({phone, msg}){
         },
         "voice": "jennifer-playht",
     },
-    "assistantId": "1e07a3cc-5011-414e-a674-6bdaa22be71c",
+    "assistantId": "e18c3847-a2cf-493e-9aed-ec7cf54a891b",
     'phoneNumberId': phone_number_id,
     'customer': {
         'number': customer_number,
@@ -90,7 +95,7 @@ function Call({phone, msg}){
         })
     }}>
       <div className='btnContent'>
-        <p>Make a Call</p>
+        <p>Call</p>
         <CallIcon></CallIcon>
     </div></button>
   </>
